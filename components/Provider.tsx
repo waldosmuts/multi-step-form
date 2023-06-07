@@ -10,9 +10,9 @@ export default function Provider({ children }: FormProviderProps) {
   const route = useRouter();
 
   const methods = useAppForm({
-    name: 'test',
-    email: 'test@test.test',
-    phone: '7357',
+    name: '',
+    email: '',
+    phone: '',
     plan: 'arcade',
     billing: 'monthly',
     addons: {
@@ -23,6 +23,7 @@ export default function Provider({ children }: FormProviderProps) {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
+    console.log(data);
     route.push('/thank-you');
   };
 
