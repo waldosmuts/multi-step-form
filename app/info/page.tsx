@@ -40,9 +40,12 @@ export default function InfoPage() {
             placeholder="e.g. Stephen King"
             className={clsx(
               'border',
-              errors.name ? 'border-strawberry-red' : 'border-light-gray',
+              errors.name
+                ? 'border-strawberry-red'
+                : 'border-light-gray focus:border-purplish-blue',
               'py-2 lg:py-3 px-3 lg:px-4 rounded-[4px] lg:rounded-lg mt-1',
-              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold'
+              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold',
+              'focus:outline-none'
             )}
             {...register('name', {
               required: 'This field is required',
@@ -70,10 +73,12 @@ export default function InfoPage() {
             placeholder="e.g. stephenking@lorem.com"
             className={clsx(
               'border',
-              errors.email ? 'border-strawberry-red' : 'border-light-gray',
-              'focus:border-marine-blue focus:outline-none',
+              errors.email
+                ? 'border-strawberry-red'
+                : 'border-light-gray focus:border-purplish-blue',
               'py-2 lg:py-3 px-3 lg:px-4 rounded-[4px] lg:rounded-lg mt-1',
-              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold'
+              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold',
+              'focus:outline-none'
             )}
             {...register('email', {
               required: 'This field is required',
@@ -105,9 +110,12 @@ export default function InfoPage() {
             placeholder="e.g. +1 234 567 890"
             className={clsx(
               'border',
-              errors.phone ? 'border-strawberry-red' : 'border-light-gray',
+              errors.phone
+                ? 'border-strawberry-red'
+                : 'border-light-gray focus:border-purplish-blue',
               'py-2 lg:py-3 px-3 lg:px-4 rounded-[4px] lg:rounded-lg mt-1',
-              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold'
+              'text-[15px] lg:text-base text-marine-blue placeholder:text-cool-gray font-medium lg:font-bold',
+              'focus:outline-none'
             )}
             {...register('phone', {
               required: 'This field is required',
@@ -128,7 +136,7 @@ export default function InfoPage() {
       <FormActions>
         <button
           type="button"
-          className="bg-marine-blue text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
+          className="bg-marine-blue hover:opacity-80 transition duration-300 text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
           onClick={validateStep}
         >
           Next Step

@@ -66,9 +66,11 @@ export default function AddonsPage() {
         className={clsx(
           'flex items-center border justify-between w-full',
           'rounded-lg py-3 lg:py-4 px-4 lg:px-6',
+          'transition duration-300',
+          'cursor-pointer',
           selected
             ? 'border-purplish-blue bg-alabaster'
-            : 'border-light-gray bg-transparent'
+            : 'border-light-gray hover:border-purplish-blue bg-transparent'
         )}
       >
         <div className="flex items-center gap-x-4 lg:gap-x-6">
@@ -124,13 +126,13 @@ export default function AddonsPage() {
       <FormActions>
         <Link
           href="/plan"
-          className="text-cool-gray font-medium lg:font-bold text-sm lg:text-base"
+          className="text-cool-gray transition duration-300 hover:text-marine-blue font-medium lg:font-bold text-sm lg:text-base"
         >
           Go Back
         </Link>
         <button
           type="button"
-          className="bg-marine-blue text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
+          className="bg-marine-blue hover:opacity-80 transition duration-300 text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
           onClick={validateStep}
         >
           Next Step

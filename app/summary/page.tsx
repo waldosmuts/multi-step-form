@@ -114,7 +114,7 @@ export default function SummaryPage() {
             </span>
             <Link
               href="/plan"
-              className="text-cool-gray underline text-sm font-medium decoration-2"
+              className="text-cool-gray hover:text-purplish-blue transition duration-300 underline text-sm font-medium decoration-2"
             >
               Change
             </Link>
@@ -147,7 +147,7 @@ export default function SummaryPage() {
         <button
           type="submit"
           // className="bg-purplish-blue text-magnolia font-medium ml-auto mt-auto px-8 py-3 rounded-lg"
-          className="bg-purplish-blue text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
+          className="bg-purplish-blue transition duration-300 hover:opacity-70 text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
         >
           Confirm
         </button>

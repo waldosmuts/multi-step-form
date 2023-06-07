@@ -67,7 +67,7 @@ export default function PlanPage() {
         'w-full rounded-md transition-colors duration-300',
         selectedPlan === plan.name
           ? 'border-purplish-blue bg-alabaster'
-          : 'border-light-gray bg-transparent'
+          : 'border-light-gray bg-transparent hover:border-purplish-blue'
       )}
     >
       <Image src={plan.icon} alt="" />
@@ -161,13 +161,13 @@ export default function PlanPage() {
       <FormActions>
         <Link
           href="/info"
-          className="text-cool-gray font-medium lg:font-bold text-sm lg:text-base"
+          className="text-cool-gray transition duration-300 hover:text-marine-blue font-medium lg:font-bold text-sm lg:text-base"
         >
           Go Back
         </Link>
         <button
           type="button"
-          className="bg-marine-blue text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
+          className="bg-marine-blue transition duration-300 hover:opacity-80 text-magnolia ml-auto px-[17px] lg:px-8 py-[10px] lg:py-3 text-sm lg:text-base rounded-[4px] lg:rounded-lg"
           onClick={validateStep}
         >
           Next Step
