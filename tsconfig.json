@@ -21,6 +21,8 @@
     ],
     "paths": {
       "@/*": ["./*"]
+      // "@/stylesheets": ["./stylesheets/"],
+      // "@/images": ["./images/"]
     }
   },
   "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
