@@ -2,8 +2,6 @@
 
 import useAppFormContext from '@/lib/hooks/useAppFormContext';
 import Link from 'next/link';
-import Image from 'next/image';
-import { useEffect } from 'react';
 import { useRouter } from 'next/navigation';
 import FormWrapper from '@/components/FormWrapper';
 import FormActions from '@/components/FormActions';
@@ -12,11 +10,16 @@ export default function SummaryPage() {
   const router = useRouter();
   const { watch } = useAppFormContext();
 
-  const { name, phone, plan, billing, addons } = watch();
+  const {
+    //  name, phone,
+    plan,
+    billing,
+    addons,
+  } = watch();
 
-  if (!(!!name && !!phone && !!plan)) {
-    router.replace('/info');
-  }
+  // if (!(!!name && !!phone && !!plan)) {
+  //   router.replace('/info');
+  // }
 
   const prices = {
     plans: {

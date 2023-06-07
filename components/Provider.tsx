@@ -23,8 +23,13 @@ export default function Provider({ children }: FormProviderProps) {
   });
 
   const onSubmit: SubmitHandler<FormValues> = (data) => {
-    console.log(data);
-    route.push('/thank-you');
+    const isValid = !!(data.name && data.email && data.phone);
+
+    if (isValid) {
+      route.push('/thank-you');
+    } else {
+      route.replace('/info');
+    }
   };
 
   return (

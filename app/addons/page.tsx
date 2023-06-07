@@ -15,12 +15,6 @@ export default function AddonsPage() {
   const { register, trigger, formState, watch } = useAppFormContext();
   const { isValid } = formState;
 
-  const { name, phone, plan } = watch();
-
-  if (!(!!name && !!phone && !!plan)) {
-    router.replace('/info');
-  }
-
   const selectedBilling = watch('billing');
   const selectedAddons = watch('addons');
 

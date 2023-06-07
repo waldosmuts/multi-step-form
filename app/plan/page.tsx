@@ -17,12 +17,6 @@ export default function PlanPage() {
   const { register, trigger, formState, watch, setValue } = useAppFormContext();
   const { isValid } = formState;
 
-  const { name, phone, plan } = watch();
-
-  if (!(!!name && !!phone && !!plan)) {
-    router.replace('/info');
-  }
-
   const selectedPlan = watch('plan');
   const selectedBilling = watch('billing');
 

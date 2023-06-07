@@ -3,19 +3,8 @@
 import Image from 'next/image';
 // Icons
 import thankYouIcon from '@/images/icon-thank-you.svg';
-import { useRouter } from 'next/navigation';
-import useAppFormContext from '@/lib/hooks/useAppFormContext';
 
 export default function ThankYouPage() {
-  const router = useRouter();
-  const { watch } = useAppFormContext();
-
-  const { name, phone, plan } = watch();
-
-  if (!(!!name && !!phone && !!plan)) {
-    router.replace('/info');
-  }
-
   return (
     <section className="flex flex-col justify-center bg-white lg:bg-transparent items-center px-6 lg:px-[100px] py-20 lg:pt-12 lg:pb-4 w-full h-full rounded-lg lg:rounded-none shadow-lg lg:shadow-none">
       {/* <section className="flex flex-col px-6 lg:px-[100px] pt-7 lg:pt-12 pb-8 lg:pb-4 w-full h-full bg-white lg:bg-transparent rounded-lg lg:rounded-none shadow-lg lg:shadow-none"> */}
